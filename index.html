@@ -244,26 +244,57 @@
 
 
     /* =========================
-       WRITING
-    ========================== */
+   WRITING
+========================== */
 
-    .article {
-      padding: 28px 0;
-      border-bottom: 1px solid #dddddd;
-    }
+.writing-intro {
+  font-size: 19px;
+  color: #555555;
+  max-width: 720px;
+  margin-bottom: 45px;
+}
 
-    .article:first-of-type {
-      margin-top: 20px;
-    }
+.article {
+  display: grid;
+  grid-template-columns: 180px 1fr 40px;
+  gap: 30px;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #dddddd;
+}
 
-    .article h3 {
-      font-size: 23px;
-      margin-bottom: 5px;
-    }
+.article:first-of-type {
+  border-top: 1px solid #dddddd;
+}
 
-    .article p {
-      color: #777777;
-    }
+.article-meta {
+  font-size: 13px;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article h3 {
+  font-size: 22px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.article h3 a {
+  color: #171717;
+  text-decoration: none;
+}
+
+.article h3 a:hover {
+  color: #d71920;
+}
+
+.article-arrow {
+  font-size: 22px;
+  color: #d71920;
+  text-decoration: none;
+  text-align: right;
+}
 
 
     /* =========================
@@ -361,6 +392,20 @@
       .button {
         margin-bottom: 10px;
       }
+      
+   .article {
+  grid-template-columns: 1fr 30px;
+  gap: 10px;
+}
+
+.article-meta {
+  grid-column: 1 / -1;
+}
+
+.article h3 {
+  font-size: 20px;
+}
+    
     }
 
   </style>
@@ -538,59 +583,198 @@
 </section>
 
 
-    <!-- WRITING -->
+   <!-- WRITING -->
 
-    <section id="writing">
+<section id="writing">
 
-      <div class="section-label">
-        Ideas & Writing
-      </div>
+  <div class="section-label">
+    Ideas & Writing
+  </div>
 
-      <h2>
-        Thoughts on our city and country.
-      </h2>
+  <h2>
+    Thoughts on our city and country.
+  </h2>
 
-
-      <div class="article">
-
-        <h3>
-          Urban Governance & Kuala Lumpur
-        </h3>
-
-        <p>
-          Selected writing on how we can build a better governed
-          and more liveable city.
-        </p>
-
-      </div>
+  <p class="writing-intro">
+    Selected writing on Kuala Lumpur, public policy, governance,
+    community and Malaysia's future.
+  </p>
 
 
-      <div class="article">
+  <div class="article">
 
-        <h3>
-          Community & Public Policy
-        </h3>
+    <div class="article-meta">
+      Focus Malaysia · 30 Aug 2026
+    </div>
 
-        <p>
-          Ideas on strengthening communities and improving public policy.
-        </p>
+    <h3>
+      <a
+        href="https://focusmalaysia.my/this-merdeka-choose-country-over-politics/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        This Merdeka, choose country over politics
+      </a>
+    </h3>
 
-      </div>
+    <a
+      class="article-arrow"
+      href="https://focusmalaysia.my/this-merdeka-choose-country-over-politics/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Read article"
+    >
+      →
+    </a>
+
+  </div>
 
 
-      <div class="article">
+  <div class="article">
 
-        <h3>
-          Malaysia
-        </h3>
+    <div class="article-meta">
+      Malay Mail · 4 Aug 2026
+    </div>
 
-        <p>
-          Commentary on politics, governance and the future of Malaysia.
-        </p>
+    <h3>
+      <a
+        href="https://www.malaymail.com/news/what-you-think/2026/08/04/the-rocket-still-flies-now-it-must-choose-its-course-ben-fong-kok-seng/230198"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        The rocket still flies. Now it must choose its course
+      </a>
+    </h3>
 
-      </div>
+    <a
+      class="article-arrow"
+      href="https://www.malaymail.com/news/what-you-think/2026/08/04/the-rocket-still-flies-now-it-must-choose-its-course-ben-fong-kok-seng/230198"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Read article"
+    >
+      →
+    </a>
 
-    </section>
+  </div>
+
+
+  <div class="article">
+
+    <div class="article-meta">
+      The Star · 28 Jun 2026
+    </div>
+
+    <h3>
+      <a
+        href="https://www.thestar.com.my/opinion/columnists/comment/2026/06/28/building-resilience-one-recycled-bottle-at-a-time"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Building resilience, one recycled bottle at a time
+      </a>
+    </h3>
+
+    <a
+      class="article-arrow"
+      href="https://www.thestar.com.my/opinion/columnists/comment/2026/06/28/building-resilience-one-recycled-bottle-at-a-time"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Read article"
+    >
+      →
+    </a>
+
+  </div>
+
+
+  <div class="article">
+
+    <div class="article-meta">
+      Malay Mail · 19 May 2026
+    </div>
+
+    <h3>
+      <a
+        href="https://www.malaymail.com/news/what-you-think/2026/05/19/from-fuel-subsidies-to-smarter-mobility-malaysia-must-rethink-how-we-move-ben-fong-kok-seng/220570"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        From fuel subsidies to smarter mobility: Malaysia must rethink how we move
+      </a>
+    </h3>
+
+    <a
+      class="article-arrow"
+      href="https://www.malaymail.com/news/what-you-think/2026/05/19/from-fuel-subsidies-to-smarter-mobility-malaysia-must-rethink-how-we-move-ben-fong-kok-seng/220570"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Read article"
+    >
+      →
+    </a>
+
+  </div>
+
+
+  <div class="article">
+
+    <div class="article-meta">
+      Malay Mail · 12 Mar 2026
+    </div>
+
+    <h3>
+      <a
+        href="https://www.malaymail.com/news/what-you-think/2026/03/12/a-city-is-more-than-its-skyline-lessons-from-restoration-of-bangunan-sultan-abdul-samad-ben-fong-kok-seng/212411"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        A city is more than its skyline: Lessons from restoration of Bangunan Sultan Abdul Samad
+      </a>
+    </h3>
+
+    <a
+      class="article-arrow"
+      href="https://www.malaymail.com/news/what-you-think/2026/03/12/a-city-is-more-than-its-skyline-lessons-from-restoration-of-bangunan-sultan-abdul-samad-ben-fong-kok-seng/212411"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Read article"
+    >
+      →
+    </a>
+
+  </div>
+
+
+  <div class="article">
+
+    <div class="article-meta">
+      New Straits Times · 30 Jan 2026
+    </div>
+
+    <h3>
+      <a
+        href="https://www.nst.com.my/opinion/columnists/2026/01/1368298/let-kl-residents-choose-their-mayor"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Let KL residents choose their mayor
+      </a>
+    </h3>
+
+    <a
+      class="article-arrow"
+      href="https://www.nst.com.my/opinion/columnists/2026/01/1368298/let-kl-residents-choose-their-mayor"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Read article"
+    >
+      →
+    </a>
+
+  </div>
+
+</section>
 
 
     <!-- CONTACT -->
