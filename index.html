@@ -1,4 +1,481 @@
-<!-- COMMUNITY -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ben Fong Kok Seng 方国昇 | Kuala Lumpur</title>
+
+  <meta
+    name="description"
+    content="Official website of Ben Fong Kok Seng (Fong Kok Seng / 方国昇), community leader, entrepreneur and writer based in Kuala Lumpur, Malaysia."
+  >
+
+  <style>
+
+    /* =========================
+       GLOBAL
+    ========================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #171717;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav {
+      padding: 28px 0;
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #333333;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #d71920;
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 680px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 50px;
+      align-items: center;
+      padding: 80px 0 0;
+    }
+
+    .hero-content {
+      padding-bottom: 80px;
+    }
+
+    .eyebrow {
+      color: #d71920;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: 1.03;
+      letter-spacing: -3px;
+      margin-bottom: 30px;
+      max-width: 700px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      color: #555555;
+      max-width: 650px;
+      margin-bottom: 38px;
+    }
+
+    .hero-image {
+      align-self: end;
+      display: flex;
+      justify-content: center;
+      height: 620px;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom center;
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .button {
+      display: inline-block;
+      background: #d71920;
+      color: #ffffff;
+      padding: 14px 23px;
+      text-decoration: none;
+      margin-right: 12px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: #b9151b;
+    }
+
+    .button-secondary {
+      background: #ffffff;
+      color: #222222;
+      border: 1px solid #cccccc;
+    }
+
+    .button-secondary:hover {
+      background: #f5f5f5;
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+      padding: 100px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    #about {
+      background: #f7f7f7;
+      position: relative;
+      left: 50%;
+      width: 100vw;
+      margin-left: -50vw;
+      padding-left: max(5vw, calc((100vw - 1120px) / 2));
+      padding-right: max(5vw, calc((100vw - 1120px) / 2));
+    }
+
+    .section-label {
+      color: #d71920;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 38px;
+      line-height: 1.2;
+      margin-bottom: 25px;
+      letter-spacing: -1px;
+    }
+
+    .about-text {
+      font-size: 20px;
+      line-height: 1.7;
+      max-width: 800px;
+      color: #444444;
+    }
+
+    .about-text p {
+      margin-bottom: 22px;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================
+       COMMUNITY CARDS
+    ========================== */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .card {
+      border-top: 3px solid #222222;
+      padding-top: 22px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #666666;
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       WRITING
+    ========================== */
+
+    .article {
+      padding: 28px 0;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .article:first-of-type {
+      margin-top: 20px;
+    }
+
+    .article h3 {
+      font-size: 23px;
+      margin-bottom: 5px;
+    }
+
+    .article p {
+      color: #777777;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    #contact {
+      padding-bottom: 110px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #151515;
+      color: #ffffff;
+      padding: 55px 0;
+    }
+
+    footer strong {
+      font-size: 18px;
+    }
+
+    footer p {
+      color: #aaaaaa;
+      margin-top: 10px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 22px 0;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 70px 0 0;
+      }
+
+      .hero-content {
+        padding-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .hero-image {
+        height: 480px;
+      }
+
+      .hero-image img {
+        max-width: 380px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .about-text {
+        font-size: 18px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .button {
+        margin-bottom: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <div class="logo">
+        BEN FONG KOK SENG · 方国昇
+      </div>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#community">Community</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <main class="container">
+
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Kuala Lumpur · Malaysia
+        </div>
+
+        <h1>
+          Building a better Kuala Lumpur.
+        </h1>
+
+        <p>
+          Community leadership, public policy and ideas for a more
+          liveable, inclusive and well-governed city.
+        </p>
+
+        <a class="button" href="#about">
+          About Ben
+        </a>
+
+        <a class="button button-secondary" href="#writing">
+          Read My Writing
+        </a>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <img
+          src="ben-fong-kok-seng.png"
+          alt="Ben Fong Kok Seng 方国昇"
+        >
+
+      </div>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+      <div class="section-label">
+        About
+      </div>
+
+      <h2>
+        Ben Fong Kok Seng 方国昇
+      </h2>
+
+      <div class="about-text">
+
+        <p>
+          Ben Fong Kok Seng (方国昇) is a Kuala Lumpur-based community
+          leader, entrepreneur and writer with a strong interest in urban
+          governance, public policy and community development.
+        </p>
+
+        <p>
+          He serves as Chairman of MPPWP Zon Bukit Bintang and Treasurer
+          of DAP Federal Territory Kuala Lumpur. He also serves on the
+          WPKL Excise Licensing Board and is a Council Member and Management
+          Committee Member of Majlis Sukan Wilayah Persekutuan (MSWP).
+          His community work focuses on the everyday issues that shape life
+          in the city — from neighbourhood infrastructure and public spaces
+          to local businesses, sustainability and community welfare.
+        </p>
+
+        <p>
+          Through his writing and public engagement, Ben contributes ideas
+          on Kuala Lumpur, governance and Malaysia's future, drawing on both
+          his experience on the ground and his background in business.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- COMMUNITY -->
 
 <section id="community">
 
@@ -59,3 +536,107 @@
   </div>
 
 </section>
+
+
+    <!-- WRITING -->
+
+    <section id="writing">
+
+      <div class="section-label">
+        Ideas & Writing
+      </div>
+
+      <h2>
+        Thoughts on our city and country.
+      </h2>
+
+
+      <div class="article">
+
+        <h3>
+          Urban Governance & Kuala Lumpur
+        </h3>
+
+        <p>
+          Selected writing on how we can build a better governed
+          and more liveable city.
+        </p>
+
+      </div>
+
+
+      <div class="article">
+
+        <h3>
+          Community & Public Policy
+        </h3>
+
+        <p>
+          Ideas on strengthening communities and improving public policy.
+        </p>
+
+      </div>
+
+
+      <div class="article">
+
+        <h3>
+          Malaysia
+        </h3>
+
+        <p>
+          Commentary on politics, governance and the future of Malaysia.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+      <div class="section-label">
+        Contact
+      </div>
+
+      <h2>
+        Let's stay connected.
+      </h2>
+
+      <p class="about-text">
+        Follow Ben's work, community activities and writing through
+        his official social media channels.
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <strong>
+        Ben Fong Kok Seng · 方国昇
+      </strong>
+
+      <p>
+        Kuala Lumpur, Malaysia
+      </p>
+
+      <p>
+        © 2026 Ben Fong Kok Seng. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
