@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Community | Ben Fong Kok Seng 方国昇</title>
+
+  <meta
+    name="description"
+    content="Community work by Ben Fong Kok Seng (方国昇) in Bukit Bintang and Kuala Lumpur, including neighbourhood improvement, education, youth, sports, welfare and urban issues."
+  >
+
+  <style>
+
+    /* =========================
+       GLOBAL
+    ========================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #171717;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav {
+      padding: 28px 0;
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .logo a {
+      color: #171717;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #333333;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #d71920;
+    }
+
+
+    /* =========================
+       PAGE HEADER
+    ========================== */
+
+    .page-header {
+      padding: 110px 0 100px;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: #d71920;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(52px, 7vw, 82px);
+      line-height: 1.03;
+      letter-spacing: -3px;
+      margin-bottom: 30px;
+    }
+
+    .lead {
+      font-size: 21px;
+      line-height: 1.7;
+      color: #555555;
+      max-width: 760px;
+    }
+
+
+    /* =========================
+       COMMUNITY AREAS
+    ========================== */
+
+    .community-section {
+      padding: 90px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .section-number {
+      color: #d71920;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 38px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 25px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      font-size: 19px;
+      line-height: 1.8;
+      color: #555555;
+      margin-bottom: 45px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .work-card {
+      border-top: 3px solid #222222;
+      padding: 25px 0 15px;
+    }
+
+    .work-card h3 {
+      font-size: 21px;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .work-card p {
+      color: #666666;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+
+    /* =========================
+       BETTER KL
+    ========================== */
+
+    .better-kl {
+      background: #f7f7f7;
+      position: relative;
+      left: 50%;
+      width: 100vw;
+      margin-left: -50vw;
+      padding-left: max(5vw, calc((100vw - 1120px) / 2));
+      padding-right: max(5vw, calc((100vw - 1120px) / 2));
+    }
+
+
+    /* =========================
+       CONNECT
+    ========================== */
+
+    .connect {
+      padding: 90px 0 110px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .section-label {
+      color: #d71920;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .connect p {
+      font-size: 18px;
+      color: #555555;
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border: 1px solid #cccccc;
+      color: #171717;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .social-link:hover {
+      color: #d71920;
+      border-color: #d71920;
+    }
+
+    .social-link-primary {
+      background: #d71920;
+      border-color: #d71920;
+      color: #ffffff;
+    }
+
+    .social-link-primary:hover {
+      background: #b9151b;
+      border-color: #b9151b;
+      color: #ffffff;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #151515;
+      color: #ffffff;
+      padding: 55px 0;
+    }
+
+    footer strong {
+      font-size: 18px;
+    }
+
+    footer p {
+      color: #aaaaaa;
+      margin-top: 10px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 22px 0;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .page-header {
+        padding: 80px 0 70px;
+      }
+
+      h1 {
+        font-size: 50px;
+        letter-spacing: -2px;
+      }
+
+      .lead {
+        font-size: 18px;
+      }
+
+      .community-section {
+        padding: 70px 0;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .section-intro {
+        font-size: 18px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .connect {
+        padding: 70px 0 80px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="container nav-inner">
+
+      <div class="logo">
+
+        <a href="index.html">
+          BEN FONG KOK SENG · 方国昇
+        </a>
+
+      </div>
+
+
+      <div class="nav-links">
+
+        <a href="index.html#about">
+          About
+        </a>
+
+        <a class="active" href="community.html">
+          Community
+        </a>
+
+        <a href="writing.html">
+          Writing
+        </a>
+
+        <a href="index.html#contact">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <main class="container">
+
+
+    <!-- PAGE HEADER -->
+
+    <header class="page-header">
+
+      <div class="eyebrow">
+        Community
+      </div>
+
+      <h1>
+        Working with communities.
+      </h1>
+
+      <p class="lead">
+        Community work begins with the everyday issues that affect how
+        people live, work and move around the city. In Bukit Bintang,
+        that means listening to residents, working with local communities
+        and engaging government agencies to improve our neighbourhoods.
+      </p>
+
+    </header>
+
+
+    <!-- NEIGHBOURHOODS -->
+
+    <section class="community-section">
+
+      <div class="section-number">
+        01 · NEIGHBOURHOODS
+      </div>
+
+      <h2>
+        Improving the places we call home.
+      </h2>
+
+      <p class="section-intro">
+        From city-centre neighbourhoods to residential communities,
+        much of the work begins with practical local issues and finding
+        ways to bring residents and government agencies together.
+      </p>
+
+
+      <div class="work-grid">
+
+
+        <div class="work-card">
+
+          <h3>
+            Infrastructure & Public Amenities
+          </h3>
+
+          <p>
+            Working on neighbourhood infrastructure, public facilities
+            and everyday improvements that make communities safer,
+            cleaner and more liveable.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Cleanliness & Environment
+          </h3>
+
+          <p>
+            Supporting cleaner neighbourhoods through community
+            programmes, waste management initiatives and cooperation
+            between residents, businesses and local authorities.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Mobility & Connectivity
+          </h3>
+
+          <p>
+            Advocating for safer pedestrian connections, better access
+            to public transport and improvements that make it easier
+            for people to move around Kuala Lumpur.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Responsive Local Government
+          </h3>
+
+          <p>
+            Raising local concerns with the relevant agencies and
+            encouraging practical solutions to issues affecting
+            residents and businesses.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- EDUCATION & YOUTH -->
+
+    <section class="community-section">
+
+      <div class="section-number">
+        02 · EDUCATION & YOUTH
+      </div>
+
+      <h2>
+        Creating opportunities for the next generation.
+      </h2>
+
+      <p class="section-intro">
+        Education, youth development and participation in community life
+        are important foundations for stronger neighbourhoods.
+      </p>
+
+
+      <div class="work-grid">
+
+
+        <div class="work-card">
+
+          <h3>
+            Education
+          </h3>
+
+          <p>
+            Supporting schools, students and education initiatives
+            that expand opportunities for young people in the community.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Youth Programmes
+          </h3>
+
+          <p>
+            Creating opportunities for young people to participate in
+            community programmes, leadership activities and local initiatives.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Sports
+          </h3>
+
+          <p>
+            Supporting sports and recreational programmes that bring
+            communities together and encourage healthy, active lifestyles.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Community Participation
+          </h3>
+
+          <p>
+            Encouraging young people to take part in the life of their
+            neighbourhoods and contribute ideas to their communities.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- COMMUNITY WELFARE -->
+
+    <section class="community-section">
+
+      <div class="section-number">
+        03 · COMMUNITY WELFARE
+      </div>
+
+      <h2>
+        Supporting communities where it matters.
+      </h2>
+
+      <p class="section-intro">
+        Strong communities depend on people looking out for one another.
+        Community initiatives can help connect residents with assistance,
+        resources and organisations able to provide support.
+      </p>
+
+
+      <div class="work-grid">
+
+
+        <div class="work-card">
+
+          <h3>
+            Food & Community Support
+          </h3>
+
+          <p>
+            Working with community partners on food distribution and
+            support initiatives for families and residents who need assistance.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Community Partnerships
+          </h3>
+
+          <p>
+            Bringing together government agencies, civil society,
+            businesses and community organisations to address local needs.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Resident Engagement
+          </h3>
+
+          <p>
+            Listening to residents and working with local community
+            representatives to identify issues and practical solutions.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Inclusive Communities
+          </h3>
+
+          <p>
+            Supporting programmes that bring people from different
+            backgrounds and neighbourhoods together.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- BETTER KUALA LUMPUR -->
+
+    <section class="community-section better-kl">
+
+      <div class="section-number">
+        04 · A BETTER KUALA LUMPUR
+      </div>
+
+      <h2>
+        Thinking beyond individual neighbourhoods.
+      </h2>
+
+      <p class="section-intro">
+        Local community work also raises larger questions about how
+        Kuala Lumpur should develop and how the city can become more
+        liveable, inclusive and responsive to the people who call it home.
+      </p>
+
+
+      <div class="work-grid">
+
+
+        <div class="work-card">
+
+          <h3>
+            Urban Governance
+          </h3>
+
+          <p>
+            Exploring how stronger local institutions and greater
+            community participation can improve decision-making in
+            Kuala Lumpur.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Public Spaces
+          </h3>
+
+          <p>
+            Supporting streets, public spaces and community facilities
+            that are welcoming, accessible and useful to the people
+            who use them.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            Sustainability
+          </h3>
+
+          <p>
+            Encouraging practical approaches to recycling, waste reduction
+            and environmentally responsible city development.
+          </p>
+
+        </div>
+
+
+        <div class="work-card">
+
+          <h3>
+            A Liveable City
+          </h3>
+
+          <p>
+            Focusing on the everyday experience of Kuala Lumpur —
+            connectivity, cleanliness, safety, accessibility and the
+            quality of neighbourhood life.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- CONNECT -->
+
+    <section class="connect">
+
+      <div class="section-label">
+        Connect
+      </div>
+
+      <h2>
+        Follow the work.
+      </h2>
+
+      <p>
+        Follow Ben's community activities and public engagement
+        through his official social media channels.
+      </p>
+
+
+      <div class="social-links">
+
+        <a
+          class="social-link social-link-primary"
+          href="https://www.facebook.com/profile.php?id=100079070792529"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook ↗
+        </a>
+
+        <a
+          class="social-link"
+          href="https://www.instagram.com/fong.kokseng/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram ↗
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <strong>
+        Ben Fong Kok Seng · 方国昇
+      </strong>
+
+      <p>
+        Kuala Lumpur, Malaysia
+      </p>
+
+      <p>
+        © 2026 Ben Fong Kok Seng. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
