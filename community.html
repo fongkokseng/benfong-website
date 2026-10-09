@@ -48,6 +48,9 @@
     ========================== */
 
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       padding: 28px 0;
       border-bottom: 1px solid #eeeeee;
       background: #ffffff;
@@ -86,6 +89,48 @@
       color: #d71920;
     }
 
+
+
+    /* ACCESSIBLE MOBILE MENU */
+    .mobile-menu { display: none; }
+    .mobile-menu summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      font-size: 24px;
+      line-height: 1;
+    }
+    .mobile-menu summary::-webkit-details-marker { display: none; }
+    .mobile-menu summary::before { content: "☰"; }
+    .mobile-menu[open] summary::before { content: "×"; }
+    .mobile-menu .mobile-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      box-shadow: 0 12px 20px rgba(0,0,0,.07);
+      padding: 14px 5%;
+    }
+    .mobile-links a {
+      display: block;
+      padding: 14px 0;
+      color: #171717;
+      text-decoration: none;
+      font-size: 16px;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .mobile-links a:last-child { border-bottom: 0; }
+    .mobile-links a.active { color: #d71920; }
+    .mobile-links a:focus-visible,
+    .mobile-menu summary:focus-visible { outline: 2px solid #d71920; outline-offset: 3px; }
 
     /* =========================
        PAGE HEADER
@@ -288,9 +333,10 @@
         font-size: 16px;
       }
 
-      .nav-links {
-        display: none;
-      }
+      .nav-links { display: none; }
+      .mobile-menu { display: block; }
+      .nav-inner { gap: 10px; }
+      .logo { font-size: clamp(12px, 3.4vw, 16px); }
 
       .page-header {
         padding: 80px 0 70px;
@@ -353,7 +399,7 @@
 
       <div class="nav-links">
 
-        <a href="index.html#about">
+        <a href="about.html">
           About
         </a>
 
@@ -370,6 +416,16 @@
         </a>
 
       </div>
+
+      <details class="mobile-menu">
+        <summary aria-label="Toggle navigation menu"></summary>
+        <div class="mobile-links">
+          <a href="about.html">About</a>
+          <a class="active" aria-current="page" href="community.html">Community</a>
+          <a href="writing.html">Writing</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </details>
 
     </div>
 
