@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +40,9 @@
     /* NAVIGATION */
 
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       padding: 28px 0;
       border-bottom: 1px solid #eeeeee;
       background: #ffffff;
@@ -76,6 +78,8 @@
     .nav-links .active {
       color: #d71920;
     }
+
+    .menu-toggle { display: none; }
 
     /* PAGE HEADER */
 
@@ -312,15 +316,33 @@
         font-size: 16px;
       }
 
-      .nav-inner {
-        align-items: flex-start;
+      .nav-inner { flex-direction: row; align-items: center; }
+      .menu-toggle {
+        display: flex;
         flex-direction: column;
-        gap: 12px;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid #dddddd;
+        background: white;
+        cursor: pointer;
       }
-
+      .menu-toggle span { display: block; height: 2px; width: 20px; background: #171717; margin: 0 auto; }
       .nav-links {
-        gap: 16px;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-bottom: 1px solid #eeeeee;
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 18px;
+        box-shadow: 0 12px 18px rgba(0,0,0,.05);
       }
+      .nav-links.open { display: flex; }
 
       .nav-links a {
         font-size: 13px;
@@ -401,7 +423,10 @@
         </a>
       </div>
 
-      <div class="nav-links">
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="primary-navigation">
         <a class="active" href="about.html">About</a>
         <a href="community.html">Community</a>
         <a href="writing.html">Writing</a>
@@ -699,5 +724,19 @@
     </div>
   </footer>
 
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('#primary-navigation');
+    menuButton.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation menu');
+    }));
+  </script>
 </body>
 </html>
