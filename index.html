@@ -399,8 +399,20 @@
         font-size: 16px;
       }
 
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
       .nav-links {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+
+      .nav-links a {
+        font-size: 14px;
       }
 
       .hero {
@@ -487,7 +499,7 @@
 
       <div class="nav-links">
 
-        <a href="#about">
+        <a href="about.html">
           About
         </a>
 
@@ -532,7 +544,7 @@
           liveable, inclusive and well-governed city.
         </p>
 
-        <a class="button" href="#about">
+        <a class="button" href="about.html">
           About Ben
         </a>
 
