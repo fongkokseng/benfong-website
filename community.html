@@ -374,6 +374,36 @@
 
     }
 
+
+    /* COMMUNITY PHOTO GALLERIES */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin: 0 0 58px;
+    }
+    .gallery-item { min-width: 0; margin: 0; }
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #f1f1f1;
+    }
+    .gallery-item figcaption {
+      padding-top: 11px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #666;
+    }
+    @media (max-width: 900px) {
+      .photo-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .photo-gallery { grid-template-columns: 1fr; gap: 25px; margin-bottom: 45px; }
+      .gallery-item img { aspect-ratio: 4 / 3; }
+    }
+
   </style>
 
 </head>
@@ -476,6 +506,26 @@
       </p>
 
 
+      
+      <div class="photo-gallery" aria-label="Neighbourhoods photographs">
+        <figure class="gallery-item">
+          <img src="images/community/ni1.jpg" alt="Community clean-up volunteers and equipment" loading="lazy" decoding="async" width="1400" height="1050">
+          <figcaption>Community clean-up volunteers and equipment</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/community/ni2.jpg" alt="Volunteers working together at PPR Desa Petaling" loading="lazy" decoding="async" width="787" height="1050">
+          <figcaption>Volunteers working together at PPR Desa Petaling</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/community/ni3.jpg" alt="Community engagement and local agency representatives" loading="lazy" decoding="async" width="1400" height="1050">
+          <figcaption>Community engagement and local agency representatives</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/community/ni4.jpg" alt="Discussion and engagement with local authorities" loading="lazy" decoding="async" width="1400" height="1050">
+          <figcaption>Discussion and engagement with local authorities</figcaption>
+        </figure>
+      </div>
+
       <div class="work-grid">
 
 
@@ -562,6 +612,22 @@
       </p>
 
 
+      
+      <div class="photo-gallery" aria-label="Education & Youth photographs">
+        <figure class="gallery-item">
+          <img src="images/community/eys1.jpg" alt="Student recognition and education support" loading="lazy" decoding="async" width="1400" height="762">
+          <figcaption>Student recognition and education support</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/community/eys2.jpg" alt="Youth and community sports gathering" loading="lazy" decoding="async" width="1400" height="933">
+          <figcaption>Youth and community sports gathering</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/community/eys3.jpg" alt="Youth development and community programme" loading="lazy" decoding="async" width="1280" height="960">
+          <figcaption>Youth development and community programme</figcaption>
+        </figure>
+      </div>
+
       <div class="work-grid">
 
 
@@ -644,6 +710,22 @@
         resources and organisations able to provide support.
       </p>
 
+
+      
+      <div class="photo-gallery" aria-label="Community Welfare photographs">
+        <figure class="gallery-item">
+          <img src="images/community/cw1.jpg" alt="Community gathering and national celebrations" loading="lazy" decoding="async" width="1400" height="933">
+          <figcaption>Community gathering and national celebrations</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/community/cw2.jpg" alt="Neighbourhood exercise and social participation" loading="lazy" decoding="async" width="1400" height="1050">
+          <figcaption>Neighbourhood exercise and social participation</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/community/cw3.jpg" alt="Fresh produce distribution with community volunteers" loading="lazy" decoding="async" width="1400" height="930">
+          <figcaption>Fresh produce distribution with community volunteers</figcaption>
+        </figure>
+      </div>
 
       <div class="work-grid">
 
