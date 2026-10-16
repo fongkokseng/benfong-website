@@ -505,6 +505,21 @@
 
     }
 
+
+    /* SELECTED COMMUNITY INITIATIVES */
+    .project-highlights { margin-top: 62px; }
+    .project-highlights .section-label { margin-bottom: 22px; }
+    .highlight-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .highlight-card { display: flex; flex-direction: column; min-width: 0; padding: 26px 24px; border: 1px solid #e4e4e4; border-top: 3px solid #d71920; background: #fafafa; color: #171717; text-decoration: none; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .highlight-card:hover { border-color: #d71920; transform: translateY(-3px); box-shadow: 0 8px 22px rgba(0,0,0,.06); }
+    .highlight-card:focus-visible { outline: 2px solid #d71920; outline-offset: 3px; }
+    .highlight-tag { color: #d71920; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 14px; }
+    .highlight-card h3 { font-size: 20px; line-height: 1.35; margin: 0 0 12px; }
+    .highlight-card p { color: #555; font-size: 15px; line-height: 1.65; margin-bottom: 24px; }
+    .highlight-more { margin-top: auto; font-size: 14px; font-weight: 700; color: #d71920; }
+    @media (max-width: 900px) { .highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 700px) { .project-highlights { margin-top: 48px; } .highlight-grid { grid-template-columns: 1fr; gap: 16px; } .highlight-card { padding: 23px 20px; } }
+
   </style>
 
 </head>
